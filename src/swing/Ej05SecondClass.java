@@ -11,6 +11,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JLayeredPane;
 
 
 public class Ej05SecondClass extends JFrame implements ActionListener{
@@ -21,6 +23,8 @@ public class Ej05SecondClass extends JFrame implements ActionListener{
 	private String contraseña;
 	private JTextField passField2;
 	private String contraseña2;
+	private JLabel escribePass;
+	private JTextField textField;
 	
 
 	
@@ -42,9 +46,22 @@ public class Ej05SecondClass extends JFrame implements ActionListener{
 		passField2.setBounds(146, 139, 203, 51);
 		contentPane.add(passField2);
 		
-		JButton comprobar = new JButton("comprueba");
-		comprobar.setBounds(375, 126, 183, 77);
+		JButton comprobar = new JButton("Comprueba si es correcta");
+		comprobar.setBounds(379, 139, 179, 51);
 		contentPane.add(comprobar);
+		
+		escribePass = new JLabel("Escribe tu contraseña");
+		escribePass.setBounds(198, 101, 112, 28);
+		contentPane.add(escribePass);
+		
+		JLayeredPane layeredPane = new JLayeredPane();
+		layeredPane.setBounds(217, 161, 1, 1);
+		contentPane.add(layeredPane);
+		
+		textField = new JTextField();
+		textField.setBounds(191, 223, 119, 37);
+		contentPane.add(textField);
+		textField.setColumns(10);
 		comprobar.addActionListener(this);
 	
 	}
