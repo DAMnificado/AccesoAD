@@ -52,6 +52,7 @@ package swing;
 			JScrollPane scrollPane = new JScrollPane();
 			scrollPane.setBounds(49, 37, 134, 172);
 			contentPane.add(scrollPane);
+			
 			JList list = new JList(alumnos);
 			scrollPane.setViewportView(list);
 			list.setListData(alumnos2);
