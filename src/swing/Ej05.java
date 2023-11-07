@@ -8,9 +8,6 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.Color;
-import java.awt.Font;
-import javax.swing.SwingConstants;
 
 public class Ej05 extends JFrame implements ActionListener {
 
@@ -19,12 +16,10 @@ public class Ej05 extends JFrame implements ActionListener {
 
 	private JTextField passField;
 
-	private JButton seguir;
+	private JButton logIn;
 	private JButton saveButton;
 	private boolean guardada = false;
 	private String contraseña;
-	private JLabel escribeUnUser;
-	private JTextField userField;
 
 	public Ej05() {
 
@@ -36,42 +31,23 @@ public class Ej05 extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 
 		passField = new JTextField();
-		passField.setHorizontalAlignment(SwingConstants.LEFT);
 		passField.setColumns(10);
-		passField.setBounds(88, 112, 203, 51);
+		passField.setBounds(107, 153, 203, 51);
 		contentPane.add(passField);
 
-		JLabel escribeUnaPass = new JLabel("Escribe una contraseña");
-		escribeUnaPass.setHorizontalAlignment(SwingConstants.CENTER);
-		escribeUnaPass.setBounds(88, 215, 203, 32);
-		contentPane.add(escribeUnaPass);
+		JLabel lblNewLabel = new JLabel("Escribe contraseña");
+		lblNewLabel.setBounds(168, 115, 193, 44);
+		contentPane.add(lblNewLabel);
 
 //BOTONES
-		seguir = new JButton("Seguir");
-		seguir.setBounds(403, 176, 170, 71);
-		contentPane.add(seguir);
-		seguir.addActionListener(this);
+		logIn = new JButton("sigamos");
+		logIn.setBounds(396, 212, 170, 71);
+		contentPane.add(logIn);
+		logIn.addActionListener(this);
 
 		saveButton = new JButton("Guardar");
 		saveButton.setBounds(381, 106, 203, 62);
 		contentPane.add(saveButton);
-		
-		JLabel titulo = new JLabel("Crear cuenta");
-		titulo.setHorizontalAlignment(SwingConstants.CENTER);
-		titulo.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 15));
-		titulo.setForeground(new Color(0, 128, 0));
-		titulo.setBounds(312, 11, 94, 32);
-		contentPane.add(titulo);
-		
-		escribeUnUser = new JLabel("Escribe un nombre de usuario");
-		escribeUnUser.setHorizontalAlignment(SwingConstants.CENTER);
-		escribeUnUser.setBounds(88, 74, 203, 38);
-		contentPane.add(escribeUnUser);
-		
-		userField = new JTextField();
-		userField.setBounds(88, 246, 203, 51);
-		contentPane.add(userField);
-		userField.setColumns(10);
 		saveButton.addActionListener(this);
 	}
 
@@ -80,7 +56,6 @@ public class Ej05 extends JFrame implements ActionListener {
 
 	
 		JButton button = (JButton) e.getSource();
-		
 		try {
 
 			if (guardada == false) {
@@ -99,12 +74,12 @@ public class Ej05 extends JFrame implements ActionListener {
 				
 				else if (button == saveButton && contraseña.isBlank()) {
 
-					System.out.println("No puedes guardar una contraseña vacía");
+					System.out.println("Meu esta vacía");
 
 				}
 
-			 else if (button == seguir && contraseña.isBlank()) {
-					System.out.println("No puedes logear con la contraseña vacía");
+			 else if (button == logIn && contraseña.isBlank()) {
+					System.out.println("No puedes logear con la contraseña vacia muxxaxo");
 				}
 				
 				
@@ -117,7 +92,7 @@ public class Ej05 extends JFrame implements ActionListener {
 
 				System.out.println("La contraseña ya ha sido guardada y es: " + contraseña);
 			} 
-			 if (button == seguir && guardada == true) {
+			 if (button == logIn && guardada == true) {
 
 					System.out.println("Veamos si puedes iniciar sesion");
 					System.out.println("contraseña es: " + contraseña);

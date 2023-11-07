@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class Ej04 extends JFrame implements ActionListener,KeyListener {
+public class Ej04_swing extends JFrame implements ActionListener,KeyListener {
 
 	private JPanel contentPane;
 	private JTextField p1X;
@@ -37,7 +37,7 @@ public class Ej04 extends JFrame implements ActionListener,KeyListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Ej04 frame = new Ej04();
+					Ej04_swing frame = new Ej04_swing();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -49,7 +49,7 @@ public class Ej04 extends JFrame implements ActionListener,KeyListener {
 	/**
 	 * Create the frame.
 	 */
-	public Ej04() {
+	public Ej04_swing() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 794, 447);
 		contentPane = new JPanel();
