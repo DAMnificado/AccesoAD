@@ -13,9 +13,7 @@ public class EjemploComboBox extends JFrame {
 
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -43,7 +41,6 @@ public class EjemploComboBox extends JFrame {
 		
 		String [] alumnos2= {"Pedro","Juana","María","Fran"};
 
-		
 		JComboBox comboBox = new JComboBox(alumnos2);
 		
 		comboBox.setBounds(51, 43, 191, 22);

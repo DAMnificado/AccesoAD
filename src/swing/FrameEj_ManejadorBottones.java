@@ -7,7 +7,6 @@ import javax.swing.JButton;
 
 public class FrameEj_ManejadorBottones implements ActionListener {
 
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton boton=(JButton)e.getSource();

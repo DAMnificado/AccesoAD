@@ -59,11 +59,8 @@ public class FrameEjemplo extends JFrame {
 		
 		JButton btnSaludar = new JButton("Saludar");
 		btnSaludar.addActionListener(new FrameEj_ManejadorBottones());
-	
 		btnSaludar.setName("saludar");
 		btnSaludar.setMnemonic(KeyEvent.VK_S);
-		
-		
 		btnSaludar.setBounds(58, 129, 89, 23);
 		contentPane.add(btnSaludar);
 		
